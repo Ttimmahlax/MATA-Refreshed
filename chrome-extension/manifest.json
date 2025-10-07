@@ -1,0 +1,104 @@
+{
+  "manifest_version": 3,
+  "name": "MATA | Digital Freedom",
+  "version": "1.7.5",
+  "description": "Secure your digital identity with end-to-end encryption and offline capabilities",
+  "permissions": [
+    "storage",
+    "tabs",
+    "unlimitedStorage",
+    "downloads"
+  ],
+  "host_permissions": [
+    "https://*.replit.app/*",
+    "http://*.replit.app/*",
+    "https://*.replit.dev/*",
+    "http://*.replit.dev/*",
+    "https://*.repl.co/*",
+    "http://*.repl.co/*",
+    "https://mata.replit.app/*",
+    "http://mata.replit.app/*",
+    "https://mat-av-20-timalmond.replit.app/*",
+    "http://mat-av-20-timalmond.replit.app/*",
+    "http://localhost/*",
+    "https://localhost/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.replit.app/*",
+        "http://*.replit.app/*",
+        "https://*.replit.dev/*",
+        "http://*.replit.dev/*",
+        "https://*.repl.co/*",
+        "http://*.repl.co/*",
+        "https://mata.replit.app/*",
+        "http://mata.replit.app/*",
+        "https://mat-av-20-timalmond.replit.app/*",
+        "http://mat-av-20-timalmond.replit.app/*",
+        "http://localhost/*",
+        "https://localhost/*"
+      ],
+      "js": [
+        "contentScript.js"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "action": {
+    "default_popup": "./popup/popup.html",
+    "default_icon": {
+      "16": "assets/icon16.png",
+      "48": "assets/icon48.png",
+      "128": "assets/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "assets/icon16.png",
+    "48": "assets/icon48.png",
+    "128": "assets/icon128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "assets/*",
+        "versionConfig.js",
+        "versionConfig.browser.js",
+        "emailUtils.js"
+      ],
+      "matches": [
+        "https://*.replit.app/*",
+        "http://*.replit.app/*",
+        "https://*.replit.dev/*",
+        "http://*.replit.dev/*",
+        "https://*.repl.co/*",
+        "http://*.repl.co/*",
+        "https://mata.replit.app/*",
+        "http://mata.replit.app/*",
+        "https://mat-av-20-timalmond.replit.app/*",
+        "http://mat-av-20-timalmond.replit.app/*",
+        "http://localhost/*",
+        "https://localhost/*"
+      ]
+    }
+  ],
+  "externally_connectable": {
+    "matches": [
+      "https://*.replit.app/*",
+      "http://*.replit.app/*",
+      "https://*.replit.dev/*",
+      "http://*.replit.dev/*",
+      "https://*.repl.co/*",
+      "http://*.repl.co/*",
+      "https://mata.replit.app/*",
+      "http://mata.replit.app/*",
+      "https://mat-av-20-timalmond.replit.app/*",
+      "http://mat-av-20-timalmond.replit.app/*",
+      "http://localhost/*",
+      "https://localhost/*"
+    ]
+  }
+}

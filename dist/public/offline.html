@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MATA | Digital Freedom - Offline</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #f9fafb;
+      color: #1f2937;
+    }
+    
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 2rem;
+      text-align: center;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
+    
+    .logo {
+      font-size: 2.5rem;
+      font-weight: bold;
+      background: linear-gradient(90deg, #7c3aed, #9333ea);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 1.5rem;
+    }
+    
+    h1 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    
+    p {
+      color: #6b7280;
+      line-height: 1.5;
+      margin-bottom: 1.5rem;
+    }
+    
+    .status {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.5rem 0.75rem;
+      background-color: #ffe4e6;
+      color: #e11d48;
+      border-radius: 9999px;
+      margin-bottom: 1.5rem;
+      font-weight: 500;
+    }
+    
+    .status:before {
+      content: '';
+      width: 0.5rem;
+      height: 0.5rem;
+      background-color: #e11d48;
+      border-radius: 50%;
+      margin-right: 0.5rem;
+    }
+    
+    .button {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background-color: #7c3aed;
+      color: white;
+      text-decoration: none;
+      border-radius: 0.25rem;
+      font-weight: 500;
+      transition: background-color 0.2s;
+    }
+    
+    .button:hover {
+      background-color: #6d28d9;
+    }
+    
+    .security-note {
+      font-size: 0.875rem;
+      color: #6b7280;
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e5e7eb;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo">MATA</div>
+    
+    <div class="status">You're offline</div>
+    
+    <h1>No internet connection</h1>
+    
+    <p>
+      You appear to be offline. Don't worry - MATA is designed to work without an internet connection.
+      Your encrypted vault data is still accessible and secure.
+    </p>
+    
+    <a href="/" class="button">Try again</a>
+    
+    <div class="security-note">
+      <strong>Security Note:</strong> Your data remains encrypted and protected even when offline.
+      Changes made while offline will sync automatically when your connection is restored.
+    </div>
+  </div>
+  
+  <script>
+    // Check connection status periodically
+    function checkConnection() {
+      if (navigator.onLine) {
+        window.location.href = '/';
+      }
+    }
+    
+    // Check connection when the page loads
+    checkConnection();
+    
+    // Set up a periodic check
+    setInterval(checkConnection, 5000);
+    
+    // Listen for online events
+    window.addEventListener('online', checkConnection);
+    
+    // Handle the "Try again" button
+    document.querySelector('.button').addEventListener('click', function(e) {
+      e.preventDefault();
+      checkConnection();
+      if (!navigator.onLine) {
+        alert('Still offline. Please check your internet connection and try again.');
+      }
+    });
+  </script>
+</body>
+</html>

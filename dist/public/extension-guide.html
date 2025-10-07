@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MATA Extension Installation Guide</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <style>
+    .step-card {
+      transition: all 0.3s ease;
+      border: 1px solid #e5e7eb;
+    }
+    .step-card:hover {
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      transform: translateY(-2px);
+    }
+    .step-number {
+      background-color: #4f46e5;
+      color: white;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+    code {
+      background-color: #f3f4f6;
+      padding: 2px 4px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+  <!-- Header -->
+  <header class="bg-white shadow">
+    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center">
+        <h1 class="text-3xl font-bold text-gray-900">MATA Extension Installation Guide</h1>
+        <a href="/" class="px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 transition">
+          Return to App
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+    <!-- Introduction -->
+    <div class="px-4 py-6 sm:px-0">
+      <div class="bg-white p-6 rounded-lg shadow mb-8">
+        <h2 class="text-2xl font-bold mb-4">Why Install the MATA Extension?</h2>
+        <p class="mb-4">
+          The MATA browser extension enhances your security and experience by providing:
+        </p>
+        <ul class="list-disc pl-6 mb-6 space-y-2">
+          <li><span class="font-medium">Secure Key Backup:</span> Your encryption keys are securely stored in the extension's protected storage.</li>
+          <li><span class="font-medium">Cross-Device Access:</span> Access your vaults across different devices by syncing your keys.</li>
+          <li><span class="font-medium">Enhanced Security:</span> Add an additional layer of security for your sensitive data.</li>
+          <li><span class="font-medium">Offline Support:</span> Maintain access to your vaults even when offline.</li>
+        </ul>
+      </div>
+
+      <!-- Installation Steps -->
+      <h2 class="text-2xl font-bold mb-6">Installation Steps</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <!-- Step 1 -->
+        <div class="step-card bg-white p-6 rounded-lg">
+          <div class="flex items-center mb-4">
+            <div class="step-number mr-3">1</div>
+            <h3 class="text-xl font-semibold">Download the Extension</h3>
+          </div>
+          <p class="mb-4">Download the MATA browser extension package from our website.</p>
+          <a href="/mata-extension.zip" download class="inline-flex items-center px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+            Download Extension
+          </a>
+          <div class="mt-4 text-sm text-gray-500">
+            <p>File: mata-extension.zip (~12KB)</p>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="step-card bg-white p-6 rounded-lg">
+          <div class="flex items-center mb-4">
+            <div class="step-number mr-3">2</div>
+            <h3 class="text-xl font-semibold">Extract the ZIP File</h3>
+          </div>
+          <p class="mb-4">Extract the downloaded ZIP file to a folder on your computer.</p>
+          <div class="bg-gray-100 p-4 rounded-lg">
+            <ol class="list-decimal pl-5 space-y-2">
+              <li>Right-click the downloaded ZIP file</li>
+              <li>Select "Extract All..." or use your preferred extraction tool</li>
+              <li>Choose a location that you can easily find later</li>
+              <li>Complete the extraction process</li>
+            </ol>
+          </div>
+          <div class="mt-4 text-sm text-gray-500">
+            <p>Make sure to remember where you extracted the files!</p>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="step-card bg-white p-6 rounded-lg">
+          <div class="flex items-center mb-4">
+            <div class="step-number mr-3">3</div>
+            <h3 class="text-xl font-semibold">Open Chrome Extensions Page</h3>
+          </div>
+          <p class="mb-4">Open the Chrome Extensions page to load the unpacked extension.</p>
+          <div class="bg-gray-100 p-4 rounded-lg">
+            <p class="mb-2">Method 1: Enter this in your address bar:</p>
+            <code class="block p-2 mb-3">chrome://extensions</code>
+            <p class="mb-2">Method 2: Navigate through Chrome menu:</p>
+            <ol class="list-decimal pl-5 space-y-2">
+              <li>Click the three dots (⋮) in the top-right corner</li>
+              <li>Select "More tools"</li>
+              <li>Click "Extensions"</li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="step-card bg-white p-6 rounded-lg">
+          <div class="flex items-center mb-4">
+            <div class="step-number mr-3">4</div>
+            <h3 class="text-xl font-semibold">Enable Developer Mode</h3>
+          </div>
+          <p class="mb-4">Enable Developer Mode in the Chrome Extensions page.</p>
+          <div class="bg-gray-100 p-4 rounded-lg">
+            <ol class="list-decimal pl-5 space-y-2">
+              <li>Look for the "Developer mode" toggle in the top-right corner of the extensions page</li>
+              <li>Click the toggle to enable Developer mode</li>
+            </ol>
+          </div>
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQMAAACCCAYAAABEz/lNAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAVsSURBVHgB7d1BTiM5AIDRF8YHmKXX7LiBs5wr9JXmDoTlLEeagwxXGC+nz9B9gqQvYCy5XCnshNhON6/eBymT3eVqlD9OuVIuTj8uq4LMvH//vnh6eipOT0+b86urq3m5/zqsLy4uisvLy8R/USy/fv0qPn/+vDpf3uvHjx/Nufbax0Tdj4+P83j4Xl7H0rlc1+u2rssyyvPyvs7OzuZhdXtdnneuG38v47eMvTc+5vb2djXW3/fM2nMrP85X11zHcO/9vlfGVfbvs92fa/S+qrJkqCr+qWazWTcGVRkPdR1LXUKjKne9OldCpYRRd7wcq455WcZ8tx4zdXzVXXdRt3/vPkqAlHWt6r5T1WXn+uW6XWbbxvE9l99fx7mMm3oM7Lzf0qct95fYfme979Gx33c/Zd+Vy1jrx1F/z732H2r7vrq6UYdfPvNQoqqqy9jq3u/Ozs5kJ0VZD4BuDNQxtsz92KrHUPdd5Xqr/d1lV3U5ZYDsvG+5bvVeH6vb+2D7fbv3Uf6O1Pte9e+5LqsaE1vv88D9V9X7XW2vfeh+6sfw8v7r11T7/Vb1Z1c/6yEPYsZOPwbqga6cqxFRQmIZMN11dXdvLjsdp9v/0aGqduxXAVPHw97+r17T31+5/ap3j3vLXq6XZS/vr+7/3fveHVd1/a7eH5+DXfcz1Pb97L/f8hlty6qXdb0aK3SMLT34xtA2M5nNZiv/wWazWTNAh85tL3t7HWPo1/VY9te1LXvfeuzLHrrH/j3sFjjGuk2f+/ZYqrLmBu0fPz4+Nv8RX758WV1flnV/f18sFotivJYx3Vw+PDw057fn5fw2Vur5Q4lvfbi7u2vO/0ZLXN++fWvO23X81fW6Ll+HbYb+uZXtftj4/Pr1a7Mvuj/XF9HvYWpshgQAVEIAQGN4MgAgJQQANHJPCMri+flZkwFGR6wB6JEQAEgJAYCUEABICQGAlBAAaHl8OvCQEuCMmREASAkBgJQQAEgJAYCUEABICQGAlBAAGIFz/DUAwIjMCACkhABAY6wJwaSkwn1d/hrlX0D/I0sDRkEILG5ubprHbLTHJZSHg6w/Qahd39zcHOKuRkPMAKQSgj8kA8DI+IkAoBH7iYCfB5gkMwIAKSEAkBICAI3cnwjmZfH+/bEeCXR1ddWcLxaLYrvtbdu2bd8XkrHLZUZwXhbXnz5pM4CJsR8BQCoQAiuhAJgKvwYESAgBgMbq14D5fF4sFgtbF4CJ0T8AkBICAI3BdQTLlYX7+/vBi//06dPgNt+/f28egLEaC+O/KYAZAYCUEABIJUJg/nK2bzVg+/bt/XLtGMjxu4+H5OMBYIQGw0BYAKbJfgQAUkIAICUEABpCACAlBAAaQgBASggApIQAQEoIAKSEAEBKCAA0hABASgggHxN3JCxqAU7NjABASggANIQAQEoIADSEAEBKCAA0hABASggApIQAQCMnBIuymA19HHUBxmZvRvDw8BCiMQDGLvvnwfPzc4hmAxib3J8I//zXf5r/cQH4s/z+f/+bzWazf+f+RLj9Y7ZvO8Av3O77o40FIJ6cdQT6A2B6xAgApIQAQEoIADSEAEBKCAA0hABASggANIQAQEoIAKSEAEBKCAA0hABASggApIQAQEoIAKSEAEBDCACkhABAKvtz4XZ5eBDJwNjlPCYUGDFBAZASAgApIQDQEAIAKSEA0BACACkhAJASAgApIQDQyA6BvQOAaREiACkhAJASAgApIQDQEAIAKSEA0BACACkhANDICYFPnz4VwHT9D1wOz3GiMOxtAAAAAElFTkSuQmCC" alt="Developer Mode Toggle" class="mt-3 w-full rounded-lg border border-gray-300">
+        </div>
+
+        <!-- Step 5 -->
+        <div class="step-card bg-white p-6 rounded-lg">
+          <div class="flex items-center mb-4">
+            <div class="step-number mr-3">5</div>
+            <h3 class="text-xl font-semibold">Load the Extension</h3>
+          </div>
+          <p class="mb-4">Load the unpacked extension into Chrome.</p>
+          <div class="bg-gray-100 p-4 rounded-lg">
+            <ol class="list-decimal pl-5 space-y-2">
+              <li>Click the "Load unpacked" button in the top-left area</li>
+              <li>Navigate to the folder where you extracted the extension files</li>
+              <li>Click "Select Folder" to load the extension</li>
+            </ol>
+          </div>
+          <img src="data:image/png;base64,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" alt="Load Unpacked Button" class="mt-3 w-full rounded-lg border border-gray-300">
+        </div>
+
+        <!-- Step 6 -->
+        <div class="step-card bg-white p-6 rounded-lg">
+          <div class="flex items-center mb-4">
+            <div class="step-number mr-3">6</div>
+            <h3 class="text-xl font-semibold">Verify Installation</h3>
+          </div>
+          <p class="mb-4">Verify that the extension is properly installed and working.</p>
+          <div class="bg-gray-100 p-4 rounded-lg">
+            <ol class="list-decimal pl-5 space-y-2">
+              <li>The MATA extension icon should appear in your Chrome toolbar</li>
+              <li>Return to the MATA application and refresh the page</li>
+              <li>The app should detect the extension automatically</li>
+              <li>If not, click the "Recheck" button in the extension status banner</li>
+            </ol>
+          </div>
+          <div class="mt-4">
+            <a href="/" class="inline-flex items-center px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 transition">
+              Return to App
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Troubleshooting Section -->
+      <div class="mt-10">
+        <h2 class="text-2xl font-bold mb-6">Troubleshooting</h2>
+        <div class="bg-white p-6 rounded-lg shadow">
+          <div class="space-y-6">
+            <div>
+              <h3 class="text-xl font-semibold mb-2">Extension Not Detected</h3>
+              <ul class="list-disc pl-6 space-y-2">
+                <li>Make sure you've completed all installation steps correctly</li>
+                <li>Refresh the MATA application page</li>
+                <li>Check if the extension appears in your Chrome extensions list</li>
+                <li>Ensure that the extension is enabled</li>
+                <li>Try restarting your browser</li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-semibold mb-2">Storage Issues</h3>
+              <ul class="list-disc pl-6 space-y-2">
+                <li>Make sure the extension has the necessary permissions</li>
+                <li>Try reinstalling the extension</li>
+                <li>Check Chrome's console for error messages (F12)</li>
+                <li>Clear your browser cache and cookies (may remove saved data)</li>
+              </ul>
+            </div>
+            
+            <div>
+              <h3 class="text-xl font-semibold mb-2">Extension Keeps Disconnecting</h3>
+              <ul class="list-disc pl-6 space-y-2">
+                <li>Ensure Chrome is updated to the latest version</li>
+                <li>Try using a different Chrome profile</li>
+                <li>Disable other extensions that might interfere with MATA</li>
+                <li>Reinstall the extension with the latest version</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-gray-200 mt-10">
+    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="mb-4 md:mb-0">
+          <p class="text-gray-500">&copy; 2025 MATA | Digital Freedom. All rights reserved.</p>
+        </div>
+        <div class="flex space-x-6">
+          <a href="/" class="text-gray-500 hover:text-gray-900">Home</a>
+          <a href="/privacy-policy" class="text-gray-500 hover:text-gray-900">Privacy Policy</a>
+          <a href="/terms" class="text-gray-500 hover:text-gray-900">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "name": "mata-auth-wasm",
+  "version": "0.1.0",
+  "files": [
+    "mata_auth_wasm_bg.wasm",
+    "mata_auth_wasm.js",
+    "mata_auth_wasm.d.ts"
+  ],
+  "module": "mata_auth_wasm.js",
+  "types": "mata_auth_wasm.d.ts",
+  "sideEffects": [
+    "./snippets/*"
+  ]
+}
