@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <title>MATA | Digital Freedom</title>
+    <meta name="description" content="Your digital freedom, secured by advanced vault technology">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icon16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icon32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/icon48.png">
+    <link rel="icon" type="image/png" sizes="128x128" href="/icon128.png">
+    
+    <!-- PWA support -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#4f46e5">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="MATA | Digital Freedom">
+    
+    <!-- iOS home screen icons -->
+    <link rel="apple-touch-icon" href="/icon192.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/icon192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/icon192.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="/icon192.png">
+    
+    <!-- Offline fallback page -->
+    <link rel="prefetch" href="/offline.html">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- Offline fallback message that's hidden by default -->
+    <div id="offline-message" style="display: none; position: fixed; bottom: 20px; right: 20px; background: #4f46e5; color: white; padding: 10px 20px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); z-index: 1000;">
+      You are currently offline. Some features may be limited.
+    </div>
+    
+    <noscript>
+      <div style="padding: 2rem; text-align: center;">
+        <h1>JavaScript Required</h1>
+        <p>MATA requires JavaScript to be enabled in your browser.</p>
+      </div>
+    </noscript>
+  </body>
+</html>
